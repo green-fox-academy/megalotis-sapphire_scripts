@@ -1,5 +1,4 @@
 import sys, os
-from pathlib import Path
 
 def renamer (path):
         dir = os.chdir(path)
