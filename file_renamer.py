@@ -1,8 +1,9 @@
-import os
+import sys, os
 
 def renamer (path):
-        setFilename = "TextFile"
+        path = sys.argv[1]
         dir = os.chdir(path)
+        setFilename = "TextFile"
 
         i = 0
         for filename in os.listdir(dir):         
@@ -13,4 +14,4 @@ def renamer (path):
                 os.rename(src, dst) 
                 i += 1
   
-renamer('C:\\Users\\NEMETH\\Desktop\\rename\\')
+renamer(sys.argv[1])
