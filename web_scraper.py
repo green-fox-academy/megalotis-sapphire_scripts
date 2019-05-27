@@ -35,3 +35,4 @@ def downloadimages(query):
 # Driver Code 
 for query in search_queries: 
     downloadimages(query)
+    
