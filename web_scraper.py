@@ -19,8 +19,7 @@ def downloadimages(query):
                  "aspect_ratio": "panoramic"}
     try: 
         path = response.download(arguments) #this is a tuple
-
-    # Handling File NotFound Error     
+    
     except FileNotFoundError:  
         arguments = {"keywords": query, 
                      "format": "jpg", 
@@ -31,8 +30,7 @@ def downloadimages(query):
             response.download(arguments)  
         except: 
             pass
-  
-# Driver Code 
+
 for query in search_queries: 
     downloadimages(query)
     
